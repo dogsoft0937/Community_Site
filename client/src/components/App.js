@@ -8,7 +8,7 @@ import LoginPage from './views/LoginPage/LoginPage';
 
 function App() {
   return (
-    <Suspense fallback={(<div>Loading...</div>)}>
+    <Suspense fallback={(<div>Loading... branchtest</div>)}>
       <NavBar />
       <div style={{height:"70%"}}>
         <Switch>
