@@ -1,5 +1,5 @@
 import { Route, Switch  } from 'react-router-dom';
-
+import React,{Suspense} from 'react';
 import NavBar from './views/NavBar/NavBar';
 import Footer from './views/Footer/Footer';
 import LandingPage from './views/LadingPage/LandingPage'
