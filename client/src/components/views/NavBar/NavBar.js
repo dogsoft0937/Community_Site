@@ -5,22 +5,24 @@ import './NavBar.css'
 function NavBar() {
   const [click, setClick] = useState(false)
   const navClick = () => setClick(!click)
-  const close = () => setClick(false)
+  const iconClick = () => setClick(false)
     return (
       <nav className="navbar">       
         <Link to="/" className="navbar-logo">
           Home
         </Link>
+
         <Link className="nav-item" onClick={navClick}>
           <i className={click ? ' ' : ' '} />
           abc
         </Link>
        
         <li className="nav-item">
-          <Link to="/" className="nav-links" onClick={close}>
-            reset
+          <Link to="/" className="nav-links" onClick={iconClick}>
+            reset(초기화면)
           </Link>
-          </li>
+        </li>
+
         <li className="nav-item">
           <Link
             to="/menu2"
@@ -30,6 +32,7 @@ function NavBar() {
             menu2
           </Link>
         </li>
+
         <li className="nav-item">
           <Link
             to="/menu3"
@@ -40,7 +43,6 @@ function NavBar() {
           </Link>
         </li>
       </nav>
-      
     );
 }
 
