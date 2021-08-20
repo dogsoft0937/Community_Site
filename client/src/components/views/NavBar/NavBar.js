@@ -27,7 +27,7 @@ function NavBar() {
           <Link
             to="/menu2"
             className="nav-links"
-            onClick={close}
+            onClick={iconClick}
           >
             menu2
           </Link>
@@ -37,7 +37,7 @@ function NavBar() {
           <Link
             to="/menu3"
             className="nav-links"
-            onClick={close}
+            onClick={iconClick}
           >
             menu3
           </Link>
