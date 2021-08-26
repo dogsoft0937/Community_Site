@@ -47,7 +47,8 @@ userSchema.pre('save',function(next){
     }
 })
 userSchema.methods.checkPassword=function(plainPassword,cb){
-    bcrypt.compare(plainPassword,this.password,(err,isMatch)=>{
+    var user=this;
+    bcrypt.compare(plainPassword,user.password,(err,isMatch)=>{
         if(err){
             return cb(err)
         }else{
@@ -67,7 +68,6 @@ userSchema.methods.createToken=function(cb){
         }
     })
 }
-
 const User = mongoose.model('User', userSchema);
 
 module.exports = { User }

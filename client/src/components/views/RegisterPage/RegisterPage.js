@@ -34,12 +34,13 @@ function RegisterPage(props) {
             if(response.data.success){
                 props.history.push('/login');
             }else{
+                props.history.push('/');
             }
         })
         onreset();
     }
     return (
-        <div style={{height:"70%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <div style={{height:"70%",display:"flex",justifyContent:"center",alignItems:"center",marginTop:"10%"}}>
             <form onSubmit={handleSubmit}>
                 <input placeholder="이름" name="name" value={name} onChange={handleChange} type="text" /><br/>
                 <input placeholder="생년월일" name="birth" value={birth} onChange={handleChange} type="date" /><br/>

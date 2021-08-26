@@ -5,7 +5,8 @@ import Footer from './views/Footer/Footer';
 import LandingPage from './views/LadingPage/LandingPage'
 import RegisterPage from './views/RegisterPage/RegisterPage';
 import LoginPage from './views/LoginPage/LoginPage';
-
+import PostListPage from './views/PostListPage/PostListPage';
+import WritePage from './views/WritePage/WritePage';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/login" component={LoginPage}/>
+          <Route exact path="/write" component={WritePage}/>
+          <Route exact path="/post_list" component={PostListPage}/>
         </Switch>
       </div>
       <Footer />
