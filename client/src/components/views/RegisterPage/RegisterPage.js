@@ -32,8 +32,10 @@ function RegisterPage(props) {
         axios.post("/api/users/register",inputs)
         .then(response=>{
             if(response.data.success){
+                alert(response.data.msg)
                 props.history.push('/login');
             }else{
+                alert(response.data.msg)
                 props.history.push('/');
             }
         })

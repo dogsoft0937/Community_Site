@@ -24,11 +24,11 @@ function LoginPage(props) {
         axios.post("/api/users/login",inputs)
         .then(response=>{
             if(response.data.loginSuccess){
+                alert(response.data.msg)
                 window.localStorage.setItem('user_id', response.data.user_id);
-                console.log(window.localStorage.getItem('user_id'));
                 props.history.push('/');
             }else{
-                alert("아이디 또는 비밀번호 확인후 다시 요청 바람")
+                alert(response.data.msg)
             }
         })
         onreset();
