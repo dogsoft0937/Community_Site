@@ -21,13 +21,14 @@ function LoginPage(props) {
     }
     const loginHandler=(e)=>{
         e.preventDefault();
-        axios.post("/api/users/login",[inputs])
+        axios.post("/api/users/login",inputs)
         .then(response=>{
-            if(response.data.success){
-                window.localStorage.setItem('userId', response.data.userId);
+            if(response.data.loginSuccess){
+                window.localStorage.setItem('user_id', response.data.user_id);
+                console.log(window.localStorage.getItem('user_id'));
                 props.history.push('/');
             }else{
-                //로그인 실패
+                alert("아이디 또는 비밀번호 확인후 다시 요청 바람")
             }
         })
         onreset();

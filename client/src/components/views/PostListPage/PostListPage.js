@@ -3,7 +3,7 @@ import React from 'react'
 function PostListPage() {
     return (
         <div>
-            post List~
+            postlist
         </div>
     )
 }
