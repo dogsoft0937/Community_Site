@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
+const saltRound=10;
 
 const userSchema = mongoose.Schema({
     name: {
@@ -31,7 +31,7 @@ const userSchema = mongoose.Schema({
 userSchema.pre('save', function (next) {
     var user = this;
     if (user.isModified('password')) {
-        bcrypt.genSalt(20, (err, salt) => {
+        bcrypt.genSalt(saltRound, (err, salt) => {
             if (err) {
                 return next(err);
             } else {
