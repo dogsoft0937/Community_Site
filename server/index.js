@@ -2,6 +2,8 @@ const express=require("express");
 const app=express();
 
 
+require("dotenv").config();
+
 //몽고디비 설정 불러오기
 const config =require('./config/key')
 

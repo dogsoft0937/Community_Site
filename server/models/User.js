@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const saltRound=10;
 
+
 const userSchema = mongoose.Schema({
     name: {
         type: String,
@@ -61,7 +62,7 @@ userSchema.methods.checkPassword = function (plainPassword, cb) {
 }
 userSchema.methods.createToken = function (cb) {
     var user = this;
-    var token = jwt.sign(user._id.toHexString(), "P@ssw0rd");
+    var token = jwt.sign(user._id.toHexString(),process.env.SECRET_KEY);
     user.token = token;
     user.save((err, user) => {
         if (err) {
@@ -73,7 +74,7 @@ userSchema.methods.createToken = function (cb) {
 }
 userSchema.statics.findByToken = function (token, cb) {
     var user = this;
-    jwt.verify(token, 'P@ssw0rd', (err, decode) => {
+    jwt.verify(token, process.env.SECRET_KEY, (err, decode) => {
         user.findOne({ "_id": decode, "token": token }, (err, user) => {
             if (err) {
                 return cb(err)

@@ -3,7 +3,7 @@
 
 
 
-
+.env
 .DS_Store
 dev.js
 npm-debug.log*

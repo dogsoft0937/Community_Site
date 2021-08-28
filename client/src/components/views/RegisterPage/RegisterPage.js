@@ -33,13 +33,13 @@ function RegisterPage(props) {
         .then(response=>{
             if(response.data.success){
                 alert(response.data.msg)
+                onreset();
                 props.history.push('/login');
             }else{
                 alert(response.data.msg)
-                props.history.push('/');
+                props.history.push('/register');
             }
         })
-        onreset();
     }
     return (
         <div style={{height:"70%",display:"flex",justifyContent:"center",alignItems:"center",marginTop:"10%"}}>
