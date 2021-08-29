@@ -1,38 +1,13 @@
 .navbar {
-  height: 80px;
+  height: 60px;
   width: 100%;
-  background: skyblue;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
+  background: rgb(36, 182, 114);
+  color:white;
   font-size: 1.3rem;
+  padding-top:25px;
 }
-.nav-item{
-  padding: 15px;
-  list-style-type: none;
+.navbar a{
   color:white;
-  text-align: center;
-  text-decoration: none;
-}
-/*icon*/
-.nav-item a{
-  color:white;
-  text-align: center;
-  text-decoration: none;
-}
-/*Home*/
-.navbar-logo{
   text-decoration:none;
-  color: white;
+  list-style-type:none;
 }
-
-
-.nav-links{
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 15px;
-  list-style: none;
-}
-
