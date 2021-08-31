@@ -28,7 +28,7 @@ function PostListPage(props) {
         return <Button style={{marginTop:"20px",marginLeft:"20px",justifyContent:"left"}} key={index}>{post.title}</Button>
     })
     return (
-        <div className="main" style={{ display: 'flex', justifyContent: 'center', height: "100%", backgroundColor: "#ededed" }}>
+        <div className="main" style={{ marginTop:"5%",display: 'flex', justifyContent: 'center', height: "100%", backgroundColor: "#ededed" }}>
             <Paper elevation={5} style={{ width: "80%", height: "70%" }}>
                 <div className="list">
                     {renderPosts}
