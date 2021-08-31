@@ -18,7 +18,7 @@ router.get('/posts',(req,res)=>{
     let findArgs={};
     Post.find(findArgs)
     .populate('writer')
-    .skip(0)
+    .skip(10)
     .limit(7)
     .exec((err,userInfo)=>{
         if(err){

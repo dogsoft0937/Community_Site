@@ -36,7 +36,7 @@ function LoginPage(props) {
         onreset();
     }
     return (
-        <div style={{height:"70%",display:"flex",justifyContent:"center",alignItems:"center",marginTop:"10%"}}>
+        <div style={{height:"60%",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:'white'}}>
             <form onSubmit={loginHandler}>
                 <input placeholder="아이디" name="id" value={id} onChange={handleChange} type="text" /><br/>
                 <input placeholder="비밀번호" name="password" value={password} onChange={handleChange} type="password" /><br/>

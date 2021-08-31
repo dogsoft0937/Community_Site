@@ -42,7 +42,7 @@ function RegisterPage(props) {
         })
     }
     return (
-        <div style={{height:"70%",display:"flex",justifyContent:"center",alignItems:"center",marginTop:"10%"}}>
+        <div style={{height:"70%",display:"flex",justifyContent:"center",alignItems:"center"}}>
             <form onSubmit={handleSubmit}>
                 <input placeholder="이름" name="name" value={name} onChange={handleChange} type="text" /><br/>
                 <input placeholder="생년월일" name="birth" value={birth} onChange={handleChange} type="date" /><br/>
