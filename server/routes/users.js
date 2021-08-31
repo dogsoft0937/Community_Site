@@ -3,6 +3,20 @@ const router = express.Router();
 
 const { User } = require("../models/User"); //모델 불러오기
 const { auth } = require('../middleware/auth');
+
+
+router.get("/auth", auth, (req, res) => {
+    res.status(200).json({
+        _id: req.user._id,
+        isAuth: true,
+        name: req.user.name,
+        birth:req.user.birth,
+        phone_number:req.user.phone_number,
+        id:req.user.id,
+        username:req.user.username
+    });
+});
+
 router.post('/register', (req, res) => {
     User.findOne({ id: req.body.id }, (err, user) => {
         if (err) {

@@ -23,16 +23,16 @@ function NavBar(props) {
         Home
       </Link>
       {window.localStorage.getItem('user_id') ? <><Link to="/write" style={{marginLeft:"10%"}}>
-        Write
+        글쓰기
       </Link>
       <Link to="/post_list"  style={{marginLeft:"10%"}}>
-        post_list
+        글목록
       </Link>
       <a
         href="#"
         onClick={logoutHandler}
         style={{marginLeft:"45%"}}
-      >logout</a>
+      >로그아웃</a>
       </> :
       
       
@@ -42,14 +42,14 @@ function NavBar(props) {
         className=""
         style={{marginLeft:"65%"}}
       >
-        Login
+        로그인
       </Link>
       <Link
         to="/register"
         className=""
         style={{marginLeft:"5%"}}
       >
-        Register
+        회원가입
       </Link>
       </>
 

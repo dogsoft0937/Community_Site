@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use('/api/users',require('./routes/users'));
-
+app.use('/api/post',require('./routes/posts'))
 const port = process.env.PORT || 5000
 
 
