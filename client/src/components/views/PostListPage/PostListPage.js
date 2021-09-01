@@ -9,19 +9,19 @@ function PostListPage(props) {
     const [Posts, setPosts]=useState([])
     const [page, setpage] = useState(1)
     useEffect(() => {
-        getPost(page);
+        getPost()
+        return () => {
+            setPosts([])
+        }
     }, [])
-    const getPost=(body)=>{
-        axios.get('/api/post/posts')
+    const getPost=()=>{
+        axios.get(`/api/post/posts`)
         .then(response=>{
-            console.log(response.data.userInfo)
-            if(response.data.success){
+            if(response.data.success && response.data.userInfo){
                 setPosts(response.data.userInfo)
             }else{
-                setPosts("");
                 alert("게시글을 불러오는데 실패하였습니다.")
             }
-            setpage(1)
         })
     }
     function handleClick(e) {

@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState,useEffect } from 'react';
 import axios from 'axios'
-export default function (Component, option) {
-    const [id, setid] = useState("")
+export default function(Component, option) {
+    const [Id, setId] = useState("")
     function Auth(props) {
         useEffect(() => {
             axios.get('/api/users/auth')
@@ -12,13 +12,13 @@ export default function (Component, option) {
                             props.history.push('/login')
                         }
                     }else{
-                    setid(response.data._id);
+                        setId(response.data._id);
                 }
-                })
+                })    
         }, [])
 
         return (
-            <Component {...props} user={id}/>
+            <Component {...props} user={Id}/>
         )
     }
     return Auth
