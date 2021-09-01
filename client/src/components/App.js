@@ -6,6 +6,7 @@ import LandingPage from './views/LadingPage/LandingPage'
 import RegisterPage from './views/RegisterPage/RegisterPage';
 import LoginPage from './views/LoginPage/LoginPage';
 import PostListPage from './views/PostListPage/PostListPage';
+import DetailPostPage from './views/DetailPostPage/DetailPostPage';
 import WritePage from './views/WritePage/WritePage';
 import auth from '../hoc/auth'
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/login" component={auth(LoginPage,false)}/>
           <Route exact path="/write" component={auth(WritePage,true)}/>
           <Route exact path="/post_list" component={auth(PostListPage,false)}/>
+          <Route exact path="/detail_post" component={auth(DetailPostPage,false)}/>
         </Switch>
       </div>
       <Footer />

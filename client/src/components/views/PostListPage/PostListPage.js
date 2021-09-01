@@ -6,7 +6,7 @@ import { Link, withRouter } from 'react-router-dom'
 import axios from 'axios';
 
 function PostListPage(props) {
-    const [Posts,setPosts]=useState([])
+    const [Posts, setPosts]=useState([])
     const [page, setpage] = useState(1)
     useEffect(() => {
         getPost(page);
@@ -24,8 +24,11 @@ function PostListPage(props) {
             setpage(1)
         })
     }
+    function handleClick(e) {
+      window.location.replace("/detail_post")
+    }
     const renderPosts=Posts.map((post,index)=>{
-        return <Button style={{marginTop:"20px",marginLeft:"20px",justifyContent:"left"}} key={index}>{post.title}</Button>
+        return <Button onClick = {handleClick} style={{marginTop:"20px",marginLeft:"20px",justifyContent:"left"}} key={index}>{post.title}</Button>
     })
     return (
         <div className="main" style={{ marginTop:"5%",display: 'flex', justifyContent: 'center', height: "100%", backgroundColor: "#ededed" }}>
