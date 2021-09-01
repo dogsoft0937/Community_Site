@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { withRouter  } from 'react-router-dom'
 
+
 //봐줬으면 하는 문제점 
 //1. 데이터를 불러오고싶은데 안불러와짐
 //2. 다시 목록으로 돌아가는 버튼을 하나 구현했는데 안뜸
@@ -33,7 +34,7 @@ function DetailPostPage(props){
     return (
       <> 
         <div className="post-view">
-          <button className="go-post-list-btn" onClick={() => history.goBack()}>목록으로 돌아가기</button>
+          <button className="go-post-list" onClick={() => history.goBack()}>목록으로 돌아가기</button>
         </div>
       </>
     )
