@@ -3,7 +3,7 @@ import './LandingPage.css';
 function LandingPage() {
     return (
         <>
-            LadingPage
+            LandingPage
         </>
     )
 }

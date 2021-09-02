@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState,useEffect } from 'react';
 import axios from 'axios'
-export default function(Component, option) {
+export default (function(Component, option) {
     const [Id, setId] = useState("")
     function Auth(props) {
         useEffect(() => {
@@ -22,6 +22,5 @@ export default function(Component, option) {
         )
     }
     return Auth
-}
-
+})
 
