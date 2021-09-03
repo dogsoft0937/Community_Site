@@ -22,7 +22,7 @@ function NavBar(props) {
       <Link to="/" style={{marginLeft: "10%" }}>
         Home
       </Link>
-      {window.localStorage.getItem('user_id') ? <><Link to="/write" style={{marginLeft:"10%"}}>
+      {(window.localStorage.getItem('user_id')!==null) ? <><Link to="/write" style={{marginLeft:"10%"}}>
         글쓰기
       </Link>
       <Link to="/post_list"  style={{marginLeft:"10%"}}>

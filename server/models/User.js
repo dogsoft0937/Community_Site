@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const saltRound=10;
-
+var ObjectId = require('mongodb').ObjectID;
 
 const userSchema = mongoose.Schema({
     name: {
@@ -62,7 +62,9 @@ userSchema.methods.checkPassword = function (plainPassword, cb) {
 }
 userSchema.methods.createToken = function (cb) {
     var user = this;
-    var token = jwt.sign(user._id.toHexString(),process.env.SECRET_KEY);
+    var objectid=new ObjectId(user._id);
+    console.log(objectid);
+    var token = jwt.sign({_id:objectid},process.env.SECRET_KEY,{expiresIn:"1h"});
     user.token = token;
     user.save((err, user) => {
         if (err) {
