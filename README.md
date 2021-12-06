@@ -1,20 +1,8 @@
-# Community_Site
-초기 설정
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-git clone https://github.com/dogsoft0937/Community_Site.git
-<br/>
-cd ./Community_Site
-<br/>
-//루트 디렉터리에서 npm install
-<br/>
-npm install
-<br/>
-//client 디렉터리에서 npm install
-<br/>
-cd ./client
-<br/>
-npm install<br/>
-
-//서버&클라이언트 실행시 루트 디렉터리에서 명령어 실행<br/>
-npm run dev<br/>
-
+  <h3 align="center">업비트 암호화폐 자동 매매 서비스</h3>
+  </p>
+</div>
